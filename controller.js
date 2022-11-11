@@ -1,5 +1,6 @@
 import * as model from './model.js';
 import 'core-js/stable';
+import recipeView from './views/recipeView.js';
 
 // const recipeContainer = document.querySelector('.recipe');
 
@@ -17,7 +18,7 @@ const controlRecipes = async function () {
     // 2) Rendering recipe
     recipeView.render(model.state.recipe);
   } catch (err) {
-    console.log(err);
+    recipeView.renderError();
   }
 };
 
